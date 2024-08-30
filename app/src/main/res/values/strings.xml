@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">EscanerOnJetpackCompose</string>
+    <string name="SC">SHOW SCAN</string>
+</resources>
