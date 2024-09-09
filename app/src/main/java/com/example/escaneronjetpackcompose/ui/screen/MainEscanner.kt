@@ -1,4 +1,4 @@
-package com.example.escaneronjetpackcompose.ui.Screen
+package com.example.escaneronjetpackcompose.ui.screen
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.escaneronjetpackcompose.R
 import com.example.escaneronjetpackcompose.ui.Component.ButtonWithBackgroundImage
-import com.example.escaneronjetpackcompose.ui.Screen.viewModel.MainEscannerViewModel
+import com.example.escaneronjetpackcompose.ui.screen.viewModel.MainEscannerViewModel
 
 
 

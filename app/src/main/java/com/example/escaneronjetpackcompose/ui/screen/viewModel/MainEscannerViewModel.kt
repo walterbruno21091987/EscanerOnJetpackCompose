@@ -1,4 +1,4 @@
-package com.example.escaneronjetpackcompose.ui.Screen.viewModel
+package com.example.escaneronjetpackcompose.ui.screen.viewModel
 
 import android.app.Activity
 import android.content.Context
