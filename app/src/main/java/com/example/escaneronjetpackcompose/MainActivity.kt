@@ -16,14 +16,16 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.escaneronjetpackcompose.ui.Screen.MainEscanner
 import com.example.escaneronjetpackcompose.ui.theme.EscanerOnJetpackComposeTheme
 import com.google.zxing.integration.android.IntentIntegrator
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             EscanerOnJetpackComposeTheme {
-                MainEscanner(this)
+                MainEscanner()
             }
         }
     }
