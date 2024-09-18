@@ -23,7 +23,7 @@ class MyQrCodeViewModel @Inject constructor():ViewModel(){
         val bitmap= Bitmap.createBitmap(size,size, Bitmap.Config.RGB_565).also {
             for (x in 0 until size){
                 for(y in 0 until size){
-                    val color = if (bits[x, y]) Color.Black else Color.White
+                    val color = if (bits[x, y]) Color.White else Color.Black
                     it.setPixel(x, y, color.toArgb())
                 }
             }}
