@@ -1,21 +1,13 @@
 package com.example.escaneronjetpackcompose.ui.screen
-import android.annotation.SuppressLint
-import android.graphics.Bitmap
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.ImageBitmap
-import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontStyle
@@ -28,9 +20,6 @@ import com.example.escaneronjetpackcompose.R
 import com.example.escaneronjetpackcompose.ui.Component.ButtonWithBackgroundImage
 import com.example.escaneronjetpackcompose.ui.navigation.Routes
 import com.example.escaneronjetpackcompose.ui.screen.viewModel.MainEscannerViewModel
-import com.google.zxing.BarcodeFormat
-import com.google.zxing.EncodeHintType
-import com.google.zxing.qrcode.QRCodeWriter
 
 
 @Composable
