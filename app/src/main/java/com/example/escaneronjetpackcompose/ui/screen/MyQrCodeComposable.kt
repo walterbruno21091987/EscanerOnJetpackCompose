@@ -14,34 +14,25 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.toArgb
+import androidx.hilt.navigation.compose.hiltViewModel
+import com.example.escaneronjetpackcompose.ui.screen.viewModel.MyQrCodeViewModel
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.EncodeHintType
 import com.google.zxing.qrcode.QRCodeWriter
 
 @Composable
-fun MyQrCodeComposable() {
+fun MyQrCodeComposable(myQrCodeViewModel: MyQrCodeViewModel= hiltViewModel()) {
 
 
 
-    fun getQrCodeBitMap(qrCodeContent:String): ImageBitmap {
-        val size=1024
-        val hints= hashMapOf<EncodeHintType,Int>().also{
-            it[EncodeHintType.MARGIN]=1
-        }
-        val bits= QRCodeWriter().encode(qrCodeContent, BarcodeFormat.QR_CODE,size,size,hints)
-        val bitmap= Bitmap.createBitmap(size,size, Bitmap.Config.RGB_565).also {
-            for (x in 0 until size){
-                for(y in 0 until size){
-                    val color = if (bits[x, y]) Color.Black else Color.White
-                    it.setPixel(x, y, color.toArgb())
-                }
-            }}
-        return bitmap.asImageBitmap()}
+
     Scaffold {
 
 
-        Column(modifier = Modifier.padding(it).fillMaxSize(), verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally) {
-            Image(bitmap=getQrCodeBitMap("no se que poner"),"My qr code")
+        Column(modifier = Modifier
+            .padding(it)
+            .fillMaxSize(), verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally) {
+            Image(bitmap=myQrCodeViewModel.getQrCodeBitMap("no se que poner"),"My qr code")
         }
     }
 }
