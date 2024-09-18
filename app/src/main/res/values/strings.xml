@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">EscanerOnJetpackCompose</string>
     <string name="SC">SHOW SCAN</string>
+    <string name="GC">GENERATE CODE</string>
 </resources>
