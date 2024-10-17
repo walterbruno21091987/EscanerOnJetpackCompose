@@ -1,10 +1,15 @@
 package com.example.escaneronjetpackcompose.ui.screen.viewModel
 
+import android.bluetooth.BluetoothAdapter
+import android.bluetooth.BluetoothManager
+import android.content.Context
+import android.content.Intent
 import android.graphics.Bitmap
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.toArgb
+import androidx.core.app.ActivityCompat
 import androidx.lifecycle.ViewModel
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.EncodeHintType
@@ -28,4 +33,8 @@ class MyQrCodeViewModel @Inject constructor():ViewModel(){
                 }
             }}
         return bitmap.asImageBitmap()}
+
+
 }
+fun Context.bluetoothAdapter(): BluetoothAdapter? =
+    (this.getSystemService(Context.BLUETOOTH_SERVICE) as BluetoothManager).adapter
